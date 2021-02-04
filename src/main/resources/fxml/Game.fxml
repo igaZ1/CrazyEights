@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="GamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.gameController">
+    <children>
+        <AnchorPane prefHeight="594.0" prefWidth="800.0" style="-fx-background-radius: 50; -fx-background-color: green;">
+            <children>
+                <ImageView fx:id="gracz" fitHeight="107.0" fitWidth="60.0" layoutX="370.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@players.JPG" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="NPCsmieszne" fitHeight="107.0" fitWidth="60.0" layoutX="370.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@robot.jpg" />
+                    </image>
+                </ImageView>
+                <Text layoutX="382.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gamer" />
+                <Text layoutX="388.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NPC" />
+                <Button fx:id="btnKartyOczekujace" layoutX="349.0" layoutY="226.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#kartyOczekujace" prefHeight="121.0" prefWidth="85.0" style="-fx-background-color: green;">
+                    <graphic>
+                        <ImageView fitHeight="124.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@cards/cardback.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="btnKartaAktywna" layoutX="460.0" layoutY="230.0" mnemonicParsing="false" onAction="#kartaAktywna" prefHeight="121.0" prefWidth="85.0" style="-fx-background-color: green;">
+                    <graphic>
+                        <ImageView fx:id="kartaAktywna" fitHeight="124.0" fitWidth="87.0" onDragDetected="#pictureOfCard" pickOnBounds="true" preserveRatio="true" />
+                    </graphic>
+                </Button>
+            <Button fx:id="btnKartaNPC1" layoutX="272.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC1" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC2" layoutX="301.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC2" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC3" layoutX="330.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC3" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC4" layoutX="360.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC4" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC5" layoutX="388.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC5" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC6" layoutX="417.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC6" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC7" layoutX="441.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC7" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaNPC8" layoutX="469.0" layoutY="112.0" mnemonicParsing="false" onAction="#KartaNPC" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaNPC8" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaNPC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/cardback.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz1" layoutX="261.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz1" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz2" layoutX="290.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz2" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz2" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz3" layoutX="320.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz3" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz3" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz4" layoutX="348.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz4" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz4" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz5" layoutX="377.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz5" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz5" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz6" layoutX="401.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz6" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz6" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz7" layoutX="429.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz7" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz7" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnKartaGracz8" layoutX="464.0" layoutY="413.0" mnemonicParsing="false" onAction="#kartaGracz8" prefHeight="95.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imageKartaGracz8" fitHeight="97.0" fitWidth="62.0" onDragDetected="#imKartaGracz" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/aceofclubs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnTasowanie" layoutX="250.0" layoutY="230.0" mnemonicParsing="false" onAction="#tasowanie" prefHeight="31.0" prefWidth="81.0" text="TASOWANIE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPass" layoutX="304.0" layoutY="25.0" mnemonicParsing="false" onAction="#pass" text="PASS" />
+            <Button fx:id="btnDzwonki" layoutX="254.0" layoutY="271.0" mnemonicParsing="false" onAction="#Dzwonki" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/dzwonki.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSerce" layoutX="297.0" layoutY="272.0" mnemonicParsing="false" onAction="#serce" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/serce.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnWino" layoutX="299.0" layoutY="316.0" mnemonicParsing="false" onAction="#wino" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/wino.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnZaladz" layoutX="251.0" layoutY="316.0" mnemonicParsing="false" onAction="#Zaladz" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@cards/żołądź.JPG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextArea fx:id="idWygrana" layoutX="105.0" layoutY="220.0" prefHeight="154.0" prefWidth="590.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="23.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Ruch użytkownika. Można zagrać karę, lub dobrać nową." wrappingWidth="191.826171875" />
+            <Text layoutX="23.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Po wykonanym ruchu naciśnij na stertę dobierania." wrappingWidth="191.826171875" />
+            <Text layoutX="23.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.Następnie naciśnij PASS" wrappingWidth="191.826171875" />
+            <TextArea fx:id="idKomunikat" layoutX="441.0" layoutY="520.0" prefHeight="38.0" prefWidth="342.0" />
+            </children></AnchorPane>
+    </children>
+</StackPane>
